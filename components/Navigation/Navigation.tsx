@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { NavButton } from '..';
+import { NavButton, TitleBold } from '..';
 
 import {
   Bookmark,
@@ -13,46 +13,57 @@ import {
   Profile,
   Twitter,
 } from '../icons';
-
 import styles from './Navigation.module.css';
 
-export const Navigation = () => {
+interface IProps {
+  selectedKey:
+    | 'home'
+    | 'explore'
+    | 'notification'
+    | 'messages'
+    | 'bookmark'
+    | 'lists'
+    | 'profile'
+    | 'more';
+}
+
+export const Navigation = ({ selectedKey }: IProps) => {
   return (
     <nav className={styles.nav}>
       <NavButton>
         <Twitter />
       </NavButton>
-      <NavButton>
+      <NavButton selected={selectedKey === 'home'}>
         <Home />
-        <span>Home</span>
+        <TitleBold>Home</TitleBold>
       </NavButton>
-      <NavButton>
+      <NavButton selected={selectedKey === 'explore'}>
         <Explore />
-        <span>Explore</span>
+        <TitleBold>Explore</TitleBold>
       </NavButton>
-      <NavButton>
+      <NavButton selected={selectedKey === 'notification'} notify="1">
         <Notification />
-        <span>Notification</span>
+        <TitleBold>Notification</TitleBold>
       </NavButton>
-      <NavButton>
+      <NavButton selected={selectedKey === 'messages'}>
         <Messages />
-        <span>Messages</span>
+        <TitleBold>Messages</TitleBold>
       </NavButton>
-      <NavButton>
+      <NavButton selected={selectedKey === 'bookmark'}>
         <Bookmark />
-        <span>Bookmark</span>
+        <TitleBold>Bookmark</TitleBold>
       </NavButton>
-      <NavButton>
+      <NavButton selected={selectedKey === 'lists'}>
         <Lists />
-        <span>Lists</span>
+        <TitleBold>Lists</TitleBold>
       </NavButton>
-      <NavButton>
+      <NavButton selected={selectedKey === 'profile'}>
         <Profile />
-        <span>Profile</span>
+        <TitleBold>Profile</TitleBold>
       </NavButton>
-      <NavButton>
+      <NavButton selected={selectedKey === 'more'}>
         <More />
-        <span>More</span>
+        <TitleBold>More</TitleBold>
       </NavButton>
     </nav>
   );
