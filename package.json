@@ -1,0 +1,31 @@
+{
+  "name": "twitter-clone-nextjs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "next": "^9.5.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/react": "^5.3.19",
+    "@types/node": "^14.0.27",
+    "@types/react": "^16.9.45",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^4.2.1",
+    "style-loader": "^1.2.1",
+    "typescript": "^3.9.7"
+  }
+}
