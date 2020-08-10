@@ -1,0 +1,17 @@
+.themeButton {
+  background-color: var(--c-theme);
+  color: var(--c-text-color);
+  height: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-weight: bold;
+
+  &:hover {
+    background-color: var(--c-theme);
+    color: var(--c-text-color);
+  }
+}
+
+.big {
+  height: 47px;
+}
