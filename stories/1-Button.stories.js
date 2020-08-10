@@ -1,16 +1,13 @@
 import React from 'react';
 
-import { Button } from '../components/Button';
+import { Button, NavButton, Navigation } from '../components';
 
 export default {
-  title: 'Button',
-  component: Button,
+  title: 'Buttons',
 };
 
-export const Emoji = () => (
-  <Button>
-    <span role="img" aria-label="so cool">
-      😀 😎 👍 💯
-    </span>
-  </Button>
-);
+export const Normal = () => <Button>Save</Button>;
+
+export const Nav = () => <NavButton>Nav</NavButton>;
+
+export const Navigate = () => <Navigation />;
