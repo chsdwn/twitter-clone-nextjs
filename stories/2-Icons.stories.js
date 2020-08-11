@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Photo, ProfileBox } from '../components';
 import * as Icons from '../components/icons';
 
 export default {
@@ -40,3 +41,7 @@ export const Icon = () => (
     <Icons.Twitter />
   </div>
 );
+
+export const ProfilePhoto = () => <Photo />;
+
+export const Box = () => <ProfileBox />;

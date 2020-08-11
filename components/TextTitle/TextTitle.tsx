@@ -8,7 +8,7 @@ interface IProps {
   children: React.ReactNode;
 }
 
-export const TextTitle = ({ bold = undefined, children }: IProps) => {
+export const TextTitle = ({ bold = false, children }: IProps) => {
   return (
     <h2 className={classNames(styles.textTitle, bold && styles.bold)}>
       {children}

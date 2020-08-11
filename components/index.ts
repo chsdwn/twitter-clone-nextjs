@@ -1,6 +1,9 @@
 export { Button } from './Button/Button';
 export { NavButton } from './NavButton/NavButton';
 export { Navigation } from './Navigation/Navigation';
+export { Photo } from './Photo/Photo';
+export { ProfileBox } from './ProfileBox/ProfileBox';
 export { Stack } from './Stack/Stack';
+export { TextBody } from './TextBody/TextBody';
 export { TextTitle } from './TextTitle/TextTitle';
 export { ThemeButton } from './ThemeButton/ThemeButton';
