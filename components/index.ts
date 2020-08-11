@@ -1,4 +1,8 @@
 export { Button } from './Button/Button';
+export { ColExtra } from './ColExtra/ColExtra';
+export { ColMain } from './ColMain/ColMain';
+export { ColSidebar } from './ColSidebar/ColSidebar';
+export { Layout } from './Layout/Layout';
 export { NavButton } from './NavButton/NavButton';
 export { Navigation } from './Navigation/Navigation';
 export { Photo } from './Photo/Photo';

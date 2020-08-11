@@ -6,19 +6,22 @@ import { Button } from '..';
 import styles from './ThemeButton.module.css';
 
 interface IProps {
-  className: string;
+  className?: string;
   big?: boolean;
+  full?: boolean;
   children: React.ReactNode;
 }
 
 export const ThemeButton = ({
   className,
   big = false,
+  full = false,
   children,
   ...props
 }: IProps) => (
   <Button
     className={classNames(styles.themeButton, big && styles.big, className)}
+    full
     {...props}>
     {children}
   </Button>

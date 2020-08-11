@@ -16,7 +16,8 @@ import {
 import styles from './Navigation.module.css';
 
 interface IProps {
-  selectedKey:
+  flat?: boolean;
+  selectedKey?:
     | 'home'
     | 'explore'
     | 'notification'
@@ -27,7 +28,7 @@ interface IProps {
     | 'more';
 }
 
-export const Navigation = ({ selectedKey }: IProps) => {
+export const Navigation = ({ flat = false, selectedKey }: IProps) => {
   return (
     <nav className={styles.nav}>
       <NavButton>

@@ -1,11 +1,19 @@
-import { Button } from '../components';
+import React from 'react';
+import { useWindowSize } from '../hooks/useWindowSize';
+
+import { ColExtra, ColMain, ColSidebar, Layout } from '../components';
+
+import { DESKTOP_SIZE, TABLET_SIZE } from '../constants';
 
 function HomePage() {
+  const size = useWindowSize();
+
   return (
-    <div>
-      <h1>Welcome to Next.js!</h1>
-      <Button>Hello</Button>
-    </div>
+    <Layout>
+      <ColSidebar flat={size.width < DESKTOP_SIZE} />
+      <ColMain>{JSON.stringify(size)}</ColMain>
+      {size.width > TABLET_SIZE && <ColExtra>extra</ColExtra>}
+    </Layout>
   );
 }
 
