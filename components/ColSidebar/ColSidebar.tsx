@@ -9,14 +9,18 @@ interface IProps {
   flat?: boolean;
 }
 
-export const ColSidebar = ({ flat }: IProps) => {
+export const ColSidebar = ({ flat = false }: IProps) => {
   return (
     <div className={classNames(styles.sidebar)}>
       <Navigation flat={flat} />
-      <ThemeButton big full>
-        Tweet
-      </ThemeButton>
-      <ProfileBox />
+      <div className={styles.tweet}>
+        <ThemeButton big full={!flat}>
+          {flat ? 'a' : 'Tweet'}
+        </ThemeButton>
+      </div>
+      <div className={styles.profile}>
+        <ProfileBox flat={flat} />
+      </div>
     </div>
   );
 };

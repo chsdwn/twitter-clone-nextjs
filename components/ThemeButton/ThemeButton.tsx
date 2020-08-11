@@ -21,7 +21,7 @@ export const ThemeButton = ({
 }: IProps) => (
   <Button
     className={classNames(styles.themeButton, big && styles.big, className)}
-    full
+    full={full}
     {...props}>
     {children}
   </Button>

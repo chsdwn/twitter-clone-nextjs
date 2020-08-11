@@ -18,7 +18,7 @@ export const NavButton = ({ selected, notify, children, ...props }: IProps) => (
       selected && styles.navButtonSelected,
     )}
     {...props}>
-    {children}
     {notify && <span className={styles.notify}>{notify}</span>}
+    {children}
   </Button>
 );
