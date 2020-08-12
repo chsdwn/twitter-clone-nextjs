@@ -1,5 +1,6 @@
 import React from 'react';
 import { useRouter } from 'next/router';
+import classNames from 'classnames';
 
 import { NavButton, TextTitle } from '..';
 
@@ -26,9 +27,9 @@ export const Navigation = ({ flat = false }: IProps) => {
             selected={selected}
             notify={notify?.toString()}
             href={path}
-            className={styles.navButton}>
+            className={classNames(styles.navButton, key)}>
             {selected ? IconSelected : Icon}
-            {showTitle && <TextTitle>{title}</TextTitle>}
+            {showTitle && <TextTitle bold>{title}</TextTitle>}
           </NavButton>
         );
       })}

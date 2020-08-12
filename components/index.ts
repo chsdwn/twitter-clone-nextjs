@@ -11,3 +11,4 @@ export { Stack } from './Stack/Stack';
 export { TextBody } from './TextBody/TextBody';
 export { TextTitle } from './TextTitle/TextTitle';
 export { ThemeButton } from './ThemeButton/ThemeButton';
+export { ThemeSelect } from './ThemeSelect/ThemeSelect';

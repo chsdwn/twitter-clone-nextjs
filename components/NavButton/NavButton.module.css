@@ -1,5 +1,4 @@
 .navButton {
-  color: var(--c-text-color);
   padding: 10px;
   position: relative;
 
@@ -14,6 +13,14 @@
 
   span {
     margin-left: 20px;
+  }
+
+  &:global(.twitter) {
+    color: var(--c-theme);
+
+    :global(html:not(.light)) & {
+      color: white;
+    }
   }
 }
 

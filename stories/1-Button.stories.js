@@ -28,7 +28,7 @@ export const Nav = () => (
 export const Navigate = () => {
   const flat = boolean('Flat', false);
 
-  return <Navigation selectedKey="home" flat={flat} />;
+  return <Navigation flat={flat} />;
 };
 
 export const Theme = () => (

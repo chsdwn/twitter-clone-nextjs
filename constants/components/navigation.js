@@ -22,8 +22,8 @@ export const MENU = [
   {
     key: 'twitter',
     path: '/',
-    Icon: <Twitter style={{ fontSize: 30, color: 'white' }} />,
-    IconSelected: <Twitter style={{ fontSize: 30, color: 'white' }} />,
+    Icon: <Twitter style={{ fontSize: 30 }} />,
+    IconSelected: <Twitter style={{ fontSize: 30 }} />,
     title: '',
   },
   {

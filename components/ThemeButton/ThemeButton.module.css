@@ -1,6 +1,6 @@
 .themeButton {
   background-color: var(--c-theme);
-  color: var(--c-text-color);
+  color: white;
   height: 40px;
   min-width: 40px;
   padding-left: 15px;
