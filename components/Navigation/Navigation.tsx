@@ -1,4 +1,5 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 
 import { NavButton, TextTitle } from '..';
 
@@ -8,27 +9,25 @@ import styles from './Navigation.module.css';
 
 interface IProps {
   flat?: boolean;
-  selectedKey?:
-    | 'home'
-    | 'explore'
-    | 'notification'
-    | 'messages'
-    | 'bookmark'
-    | 'lists'
-    | 'profile'
-    | 'more';
 }
 
-export const Navigation = ({ flat = false, selectedKey = 'home' }: IProps) => {
+export const Navigation = ({ flat = false }: IProps) => {
+  const router = useRouter();
+
   return (
     <nav className={styles.nav}>
-      {MENU.map(({ key, Icon, IconSelected, title, notify }) => {
+      {MENU.map(({ key, path, Icon, IconSelected, title, notify }) => {
         const showTitle = !flat && title.length > 0;
-        const selected = selectedKey === key;
+        const selected = router.pathname === path;
 
         return (
-          <NavButton key={key} selected={selected} notify={notify?.toString()}>
-            {selected ? <IconSelected /> : <Icon />}
+          <NavButton
+            key={key}
+            selected={selected}
+            notify={notify?.toString()}
+            href={path}
+            className={styles.navButton}>
+            {selected ? IconSelected : Icon}
             {showTitle && <TextTitle>{title}</TextTitle>}
           </NavButton>
         );

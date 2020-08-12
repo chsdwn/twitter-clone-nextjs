@@ -3,6 +3,7 @@
   cursor: pointer;
   color: var(--c-text-color);
   border-radius: 99px;
+  text-decoration: none;
 
   transition: var(--fade);
 
@@ -11,7 +12,7 @@
   justify-content: center;
 
   &:hover {
-    background-color: var(--c-theme-20);
+    background-color: var(--c-theme-10);
     color: var(--c-theme);
   }
 }
