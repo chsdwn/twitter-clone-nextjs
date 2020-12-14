@@ -19,7 +19,8 @@ export const Navigation = ({ flat = false }: IProps) => {
     <nav className={styles.nav}>
       {MENU.map(({ key, path, Icon, IconSelected, title, notify }) => {
         const showTitle = !flat && title.length > 0;
-        const selected = router ? router.pathname === path : '';
+        let selected = false;
+        if (router) selected = router.pathname === path;
 
         return (
           <NavButton
