@@ -12,7 +12,7 @@ interface IProps {
 export const Stack = ({ gap = 10, column = false, children }: IProps) => (
   <div
     className={classNames(styles.stack, column && styles.column)}
-    style={{ '--gap': `${gap}px` }}>
+    style={{ gap: `${gap}px` }}>
     {children}
   </div>
 );
